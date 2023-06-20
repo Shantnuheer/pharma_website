@@ -1,0 +1,195 @@
+{% include 'navbar.html' %}
+<style>
+    img{
+        height: 300px;
+        width: 500px;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    .yo{
+        margin-left: 15px;
+    }
+    .edufair-footer-1x {
+    background: linear-gradient(to right, #12C3D2, #2edfb4 );
+    width: 100%;
+    color: #f1f1f1;
+    padding-top: 70px;
+    margin-top: 60px;
+}
+    
+</style>
+
+
+<div class="container" style="border-style: groove;border-radius: 50px;margin-top: 6px;">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-12">
+                <div class="panel-heading">
+                    <h1 style="text-align: center;">{{data.Product_name}}</h1> <br>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="container">
+
+                                <ul class="list-group" style="font-size: small;border-style: groove;border-radius: 20px;">
+                                <br>
+                                <li class="yo" style="font-size: medium;"><strong>{{data.Product_name}}</strong></li> <hr>
+                                <li class="yo">CAT No :{{data.CAT_NO}}</li><hr>
+                                <li class="yo">Chemical Name :{{data.Chemical_name}}</li> <hr>
+                                <li class="yo">Molecular Formula :{{data.Molecular_Formula}}</li> <hr>
+                                <li class="yo">Molecular Weight :{{data.Molecular_Weight}}</li> <hr>
+                                <li class="yo">CAS Number :{{data.CAS_Number}}</li> <hr>
+                                <li class="yo">Solubility :{{data.Solubility}}</li> <hr>
+                                <li class="yo">Storage :{{data.Storage}}</li> <hr>
+                                <li class="yo">Keywords :{{data.Keywords}}</li> <hr>
+                                <li class="yo">Purity by HPLC :{{data.Purity_by_HPLC}}</li> <hr>
+                                <li class="yo">Inventory Status :{{data.Inventory_status}}</li> <br>
+                                
+                            </ul>
+                        </div>
+                        <br>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="{{data.image.url}}" alt="" srcset="">
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Request For Quote
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{data.Product_name}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    <form action="/enquiry" method="post">
+        {% csrf_token %}
+        <div class="modal-body">
+            <div class="row">
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control" placeholder="Product Name" name="product" id="" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" placeholder="Full Name" name="name" id="" required>
+                    <br>
+                    <input type="text" class="form-control" placeholder="Company Name" name="company" id="">
+                    <br>
+                    <input type="text" class="form-control" placeholder="Package" name="package" id="">
+                    
+                </div>
+                <div class="col-lg-6">
+                    <input type="email" class="form-control" placeholder="Email ID" name="email" id="" required>
+                    <br>
+                    <input type="number" class="form-control" placeholder="Contact Number" name="contact" id="" required>
+                    <br>
+                    <select class="form-control" name="weight" id="">
+                        <option >MG</option>
+                        <option >G</option>
+                        <option >KG</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit"  class="btn btn-primary">Send Enquiry</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{% url 'cart' data.id %}" style="width:100%; background: grey;" class="btn btn-primary">ADD RFQ LIST</a>
+
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="" style="width:100%;color: aliceblue;" class="btn btn-info" target="_blank"> DOWNLOAD COA </a>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+     <!-- Start footer -->
+
+     <div class="edufair-footer-1x padding-bottom-large">		
+			
+        <div class="edufair-footer-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 edufair-footer-subscription">	
+                          
+                      </div>	                                                                                         
+                      <div class="col-md-4 edufair-footer-address">	
+                      <h5>ABOUT</h5><br>
+                          
+                          <p style="text-align:justify;">Demo laboratories private limited (Based in India) are in Business for science &amp; innovation,
+                          it is continuously involved in design, research , development with cost effective synthesis
+                          and finding out new techniques of isolation &amp; purification.</p>
+                                              
+                      </div>
+                      <div class="col-md-2">
+<h5>Quick Links</h5><br>	
+
+<p>Home </p>
+<p>About </p>
+<p>Product </p>
+<p>Services </p>
+<p>Facility </p>
+
+
+
+                      </div>
+                      <div class="col-md-3">
+                      <h5>Contact</h5><br>
+                      <p> <i class="fa fa-phone"></i>(+91) 8655 752 646 </p>				
+                              <p> <i class="fa fa-envelope"></i>info@demo.com </p>								
+                              <p> <i class="fa fa-map-marker"></i>Demo Laboratories Pvt Ltd 38,
+                              Solitaire Industrial Estate,
+                              Plot No.TS-1, Near Nandi Palace Hotel,
+                              MIDC-Phase 1, Dombivali (E),Mumbai, Maharashtra 421203
+                              www.Demo.com</p>	
+                      
+
+
+
+                      </div>
+                      
+                      
+                      <div class="col-md-3">	<h5>Download Sample COA</h5><br>
+                      <div style="width: 100%; margin-top:20px;">
+                        
+                      </div>
+                      
+<a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 1</button></a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 2</button></a>
+                      </div>
+                          
+                      </div>
+                                      
+                      
+              
+                  </div>					
+              </div>			
+        </div>

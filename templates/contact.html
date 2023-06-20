@@ -1,0 +1,89 @@
+{% include 'navbar.html' %}
+<style>
+    .edufair-footer-1x {
+    background: linear-gradient(to right, #12C3D2, #2edfb4 );
+    width: 100%;
+    color: #f1f1f1;
+    padding-top: 70px;
+    margin-top: 60px;
+}
+</style>
+{% load crispy_forms_tags %}
+<form action="" method="post">
+{% csrf_token %}
+
+    <div class="container border bg-dark p-3 text-light" >
+        <label for="">Name</label>
+        <input type="text" class="form-control my-2" name="Name" placeholder="Enter name" id="">
+        <label for="">Email</label>
+        <input type="email" class="form-control my-2" name="Email" placeholder="Enter name" id="">
+        <label for="">Phone Number</label>
+        <input type="number" class="form-control my-2" name="Phone" placeholder="Mobile Number" id="">
+        <label for="">Message</label>
+        <textarea id="" cols="30" rows="10" class="form-control my-2" name="Message" ></textarea> <br>
+       <button class="btn btn-success"  type="submit">Submit</button>
+    </div>
+
+
+    <!-- Footer  -->
+
+    <div class="edufair-footer-1x padding-bottom-large">		
+        
+    <div class="edufair-footer-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 edufair-footer-subscription">	
+                    
+                </div>	                                                                                         
+                <div class="col-md-4 edufair-footer-address">	
+                    <h5>ABOUT</h5><br>
+                    
+                    <p style="text-align:justify;">Demo laboratories private limited (Based in India) are in Business for science &amp; innovation,
+                        it is continuously involved in design, research , development with cost effective synthesis
+                        and finding out new techniques of isolation &amp; purification.</p>
+                        
+                    </div>
+                    <div class="col-md-2">
+<h5>Quick Links</h5><br>	
+
+<p>Home </p>
+<p>About </p>
+<p>Product </p>
+<p>Services </p>
+<p>Facility </p>
+
+
+
+                  </div>
+                  <div class="col-md-3">
+                  <h5>Contact</h5><br>
+                  <p> <i class="fa fa-phone"></i>(+91) 9876543210 </p>				
+                          <p> <i class="fa fa-envelope"></i>info@example.com </p>								
+                          <p> <i class="fa fa-map-marker"></i>Demo Laboratories Pvt Ltd 38,
+                          Solitaire Industrial Estate,
+                          Plot No.TS-1, Near Nandi Palace Hotel,
+                          MIDC-Phase 1, Dombivali (E),Mumbai, Maharashtra 421203
+                          www.example.com</p>	
+                  
+
+
+
+                  </div>
+                  
+                  
+                  <div class="col-md-3">	<h5>Download Sample COA</h5><br>
+                  <div style="width: 100%; margin-top:20px;">
+                    
+                  </div>
+                  
+<a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 1</button></a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 2</button></a>
+                  </div>
+                      
+                  </div>
+                  
+                  
+                  
+              </div>					
+            </div>			
+    </div>
+    </form>

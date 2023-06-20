@@ -1,0 +1,27 @@
+{% include 'navbar.html' %}
+
+<form action="" method="post">
+  {% csrf_token %}
+  <!-- {{form}} -->
+  <div class="form control d-flex my-5" >
+    
+
+    <input type="text" style="margin-left: 110px; width:30%;" value="{{data.Product_name}}" placeholder="Product_name" name="Product_name" id="">
+      
+
+    <input type="number" style="margin-left: 20px;"  placeholder="Quantity" name="quantity" value="{{user}}" id="">
+   
+
+    <input type="text" style="margin-left: 20px;" value="{{user}}" placeholder="Username" name="user" id="">
+    
+  <button type="submit" style="margin-left: 20px;" class="btn btn-secondary">Add to cart</button>
+</form>
+  
+  
+
+<script>
+  document.getElementById('id_Product_name').value = "{{data.Product_name}}"
+  document.getElementById('id_user').value = "{{user.username}}"
+</script>
+
+ 

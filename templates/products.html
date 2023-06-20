@@ -1,0 +1,169 @@
+{% include 'navbar.html' %}
+<style>
+    .ok {
+        margin: 40px 18px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 18px;
+        color: white;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+    .img{
+        /* object-fit: cover; */
+        width: 100%;
+        height: 250px;
+    }
+    /* .alpha{
+        display: flex;
+        position: absolute;
+        top: -20px;
+    } */
+    .a.d-flex {
+    position: relative;
+    margin-top: -135px;
+    margin-left: 70px;
+}
+
+.aa{
+   
+    border: 2px black double;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    
+}
+
+
+.main.container {
+    margin-top: 52px;
+    margin-top: 155px;
+}
+
+.edufair-footer-1x {
+    background: linear-gradient(to right, #12C3D2, #2edfb4 );
+    width: 100%;
+    color: #f1f1f1;
+    padding-top: 70px;
+    margin-top: 60px;
+}
+
+
+</style>
+
+
+<div class="container-fluid">
+
+    <div class="center">
+        <img class="img" src="https://images.pexels.com/photos/831079/pexels-photo-831079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="200px" width="100%"  alt="">
+        <ul >
+        <div class=" a d-flex">
+              <li><a class="ok" href="{% url 'products' %}">A</a></li>
+              <li><a class="ok" href="{% url 'B' %}">B</a></li>
+            <li><a class="ok" href="{% url 'C' %}">C</a></li>
+            <li><a class="ok" href="">D</a></li>
+            <li><a class="ok" href="">E</a></li>
+            <li><a class="ok" href="">F</a></li>
+            <li><a class="ok" href="">G</a></li>
+            <li><a class="ok" href="">H</a></li>
+            <li><a class="ok" href="">I</a></li>
+            <li><a class="ok" href="">J</a></li>
+            <li><a class="ok" href="">K</a></li>
+            <li><a class="ok" href="">L</a></li>
+            <li><a class="ok" href="">M</a></li>
+            <li><a class="ok" href="">N</a></li>
+            <li><a class="ok" href="">O</a></li>
+            <li><a class="ok" href="">P</a></li>
+            <li><a class="ok" href="">Q</a></li>
+            <li><a class="ok" href="">R</a></li>
+            <li><a class="ok" href="">S</a></li>
+            <li><a class="ok" href="">T</a></li>
+            <li><a class="ok" href="">U</a></li>
+            <li><a class="ok" href="">V</a></li>
+            <li><a class="ok" href="">W</a></li>
+            <li><a class="ok" href="">X</a></li>
+            <li><a class="ok" href="">Y</a></li>
+            <li><a class="ok" href="">Z</a></li>
+        </ul>
+    </div>
+    </div>
+
+</div>
+
+<div class="main container">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-lg-4">
+            <div class="d-grid gap-2">
+                <a style="padding: 10px;" href="{% url 'readmore' i.id %}"> <button  class="btn btn-outline-secondary" type="button">  <i class="fa fa-arrow-circle-right">{{i.Product_name}}</i></button>
+                </a> </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+       <!-- Start footer -->
+
+       <div class="edufair-footer-1x padding-bottom-large">		
+			
+        <div class="edufair-footer-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 edufair-footer-subscription">	
+                          
+                      </div>	                                                                                         
+                      <div class="col-md-4 edufair-footer-address">	
+                      <h5>ABOUT</h5><br>
+                          
+                          <p style="text-align:justify;">Demo laboratories private limited (Based in India) are in Business for science &amp; innovation,
+                          it is continuously involved in design, research , development with cost effective synthesis
+                          and finding out new techniques of isolation &amp; purification.</p>
+                                              
+                      </div>
+                      <div class="col-md-2">
+<h5>Quick Links</h5><br>	
+
+<p>Home </p>
+<p>About </p>
+<p>Product </p>
+<p>Services </p>
+<p>Facility </p>
+
+
+
+                      </div>
+                      <div class="col-md-3">
+                      <h5>Contact</h5><br>
+                      <p> <i class="fa fa-phone"></i>(+91) 8655 752 646 </p>				
+                              <p> <i class="fa fa-envelope"></i>info@demo.com </p>								
+                              <p> <i class="fa fa-map-marker"></i>Demo Laboratories Pvt Ltd 38,
+                              Solitaire Industrial Estate,
+                              Plot No.TS-1, Near Nandi Palace Hotel,
+                              MIDC-Phase 1, Dombivali (E),Mumbai, Maharashtra 421203
+                              www.allmpus.com</p>	
+                      
+
+
+
+                      </div>
+                      
+                      
+                      <div class="col-md-3">	<h5>Download Sample COA</h5><br>
+                      <div style="width: 100%; margin-top:20px;">
+                        
+                      </div>
+                      
+<a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 1</button></a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="edufair-course-text" href="#"><button type="button" class="btn btn-primary">Sample 2</button></a>
+                      </div>
+                          
+                      </div>
+                                      
+                      
+              
+                  </div>					
+              </div>			
+        </div>

@@ -1,0 +1,41 @@
+{% include 'navbar.html' %}
+<style>
+    input {
+        text-align: center;
+    }
+</style>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group w-50 mx-auto my-5">
+
+        <label for="">Username</label>
+        <input type="text" name="username" id="" required class="form-control mx-auto">
+
+        <label for="">Email</label>
+
+        <input type="email" name="email" id="" required class="form-control  mx-auto">
+
+        <label for="">Password</label>
+
+        <input type="password" name="password" id="" required class="form-control mx-auto">
+
+        <label for="">Confirm Password</label>
+
+        <input type="password" name="confirm password" id="" required class="form-control mx-auto">
+
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+                <div class="col-md-6"  >
+                    <a href="{% url 'login' %}" style="float: right;" class="btn btn-outline-success">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
