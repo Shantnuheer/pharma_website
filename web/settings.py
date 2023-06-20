@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l#h0mo(%-)-pqn7n0im)_*wv2=67$!76^jz!hca^%4w&2hb4%('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -153,6 +153,7 @@ cloudinary.config(
   cloud_name = "dzpj6gt6l", 
   api_key = "955878333625773", 
   api_secret = "F-wEbBBsP2q6mADRA761N8iERnY",
+  api_proxy = "http://proxy.server:3128",
   secure = True
 )
 
